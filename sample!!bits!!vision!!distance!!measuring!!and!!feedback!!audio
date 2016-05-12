@@ -1,0 +1,47 @@
+const int pinTrigger = 8;
+const int pinEcho = 7;
+const int pinSpeaker = 12;
+void setup()
+{
+
+Serial.begin(9600); //Serial Monitor
+pinMode(pinTrigger, OUTPUT);
+pinMode(pinEcho, INPUT);
+pinMode(pinSpeaker, OUTPUT);
+}
+
+void loop()
+{
+digitalWrite(pinTrigger, LOW);
+delayMicroseconds(10);
+digitalWrite(pinTrigger, HIGH);
+int distance = pulseIn(pinEcho, HIGH)/58;
+
+if(distance <= 110 && distance >= 70) 
+{
+  digitalWrite(pinSpeaker,HIGH);
+  delay(500);
+  digitalWrite(pinSpeaker,LOW);
+  delay(450);
+}
+delay(100);
+if(distance <= 70 && distance >= 30)
+{
+digitalWrite(pinSpeaker, LOW);
+delay(100);
+digitalWrite(pinSpeaker, HIGH);
+delay(150);
+}
+else if(distance <= 30 && distance>=0)
+
+{
+digitalWrite(pinSpeaker, LOW);
+delay(20);
+digitalWrite(pinSpeaker, HIGH);
+delay(5);
+} 
+else
+{
+digitalWrite(pinSpeaker, LOW);
+}
+}
