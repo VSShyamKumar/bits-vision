@@ -18,7 +18,7 @@ Project Details
 Motivation
 In many developing and underdeveloped countries, ETAs are often prohibitively expensive. For example:
 
-MINI GUIDE by GDP Australia costs around $500.
+MINI GUIDE by GDP Australia costs around $500. (https://www.gdp-research.com.au/minig_1.htm)
 Smart Cane by IIT Delhi costs approximately INR 3500.
 Given these high costs, my goal is to provide a more affordable and accessible solution for visually impaired individuals. BITS-VISION utilizes HC-SR04 ultrasonic sensors. While these sensors are not perfect—they are unidirectional and cannot detect objects behind them—they offer a starting point. As the saying goes, "something is better than nothing."
 
